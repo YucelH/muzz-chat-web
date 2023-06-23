@@ -25,7 +25,6 @@ export default function MessagesView(props: {messages: MessageObj[]}){
                verticalMargin = 1;
             else if(messageTimeHours - prevMessageTimeHours > 1)
               displayDateTime = true;
-
           }
           let messageElement = <Message verticalMargin={verticalMargin} key={message.time} text={message.text}/>
 
@@ -40,12 +39,6 @@ export default function MessagesView(props: {messages: MessageObj[]}){
         })}
     </div>
   )
-}
-
-function isWithinInterval(time1: number, time2: number, interval: number): boolean {
-  //check if time1-time2 is <= to interval, if so then change margin, else do nothing
-  //Map needs to get previous element and get time from it
-  return false
 }
 
 const messagesViewStyle: React.CSSProperties = {

@@ -8,14 +8,17 @@ export default function Message(props: {
     margin: '1%',
     marginTop: props.verticalMargin ? `${props.verticalMargin}px` : '5px',
     marginBottom: '1px', 
-    display: 'block',
     position: 'relative',
-    width: '200px',
+    width: '30%',
     height: 'auto',
     backgroundColor: '#F72D92',
     padding: '1%',
     borderRadius: '20px',
-    left: '58%',
+    left: '65%',
+  }
+
+  const senderTextStyle: React.CSSProperties = {
+    color: '#fff'
   }
 
   return (
@@ -25,32 +28,18 @@ export default function Message(props: {
   )
 }
 
-// const messageStyle: CSS.Properties = {
-//   backgroundColor: '#F72D92',
-//   borderRadius: 
-// };
+/////////////Styles for received messages/////////////////////////// 
+// const receiverBubbleStyle: React.CSSProperties = {
+// 	margin: '1%',
+//   display: 'block',
+//   width: '200px',
+//   height: 'auto',
+//   backgroundColor: '#eeedf0',
+//   padding: '1%',
+//   borderRadius: '20px',
+//   float: 'left',
+// }
 
-
-
-const receiverBubbleStyle: React.CSSProperties = {
-	margin: '1%',
-  // display: 'inline-block',
-  display: 'block',
-  // position: 'static',
-  width: '200px',
-  // width: 'auto',
-  height: 'auto',
-  backgroundColor: '#eeedf0',
-  padding: '1%',
-  borderRadius: '20px',
-  float: 'left',
-}
-
-const senderTextStyle: React.CSSProperties = {
-  color: '#fff'
-}
-
-const receiverTextStyle: React.CSSProperties = {
-  // color: '#404040'
-  color: '#5b5b5c'
-}
+// const receiverTextStyle: React.CSSProperties = {
+//   color: '#5b5b5c'
+// }

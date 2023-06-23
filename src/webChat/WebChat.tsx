@@ -5,7 +5,6 @@ import profilePicture from '../images/profile-icon.png'
 
 const LOCAL_STORAGE_KEY: string = 'muzzChat.messages';
 
-// {text: 'Hey', date: 1, time: 2} , {text: 'How are you', date: 1, time: 1}
 export default function WebChat() {
     const empty: MessageObj[] = []
     const [messages, setMessages] = useState(empty);
@@ -26,8 +25,6 @@ export default function WebChat() {
 
 
     function sendMessage(event: React.KeyboardEvent<HTMLTextAreaElement>){
-        console.log(event.currentTarget.value)
-        console.log(event.currentTarget.value.trim())
         if (event.key === 'Enter' && event.currentTarget.value.trim().length > 0){
             const date = new Date();
 
@@ -76,7 +73,6 @@ const userNameTextStyle: React.CSSProperties = {
 const userProfileImageStyle: React.CSSProperties = {
     height: '30px',
     width: '30px',
-    // display: 'inline'
 }
 
 const mainStyle: React.CSSProperties = {
